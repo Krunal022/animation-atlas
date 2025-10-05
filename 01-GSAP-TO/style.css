@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: gilroy;
+}
+
+nav {
+    z-index: 99;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+
+#navL {
+    width: 30%;
+    padding: 2vw 5vw;
+}
+
+#navL h3 {
+    font-family: Segoe Script;
+
+}
+
+#navR {
+    width: 70%;
+    padding: 2vw 5vw;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+}
+
+nav a {
+    font-weight: 500;
+    margin-right: 3vw;
+    font-family: gilroy;
+    color: black;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+}
+
+#page1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: gilroy;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#page1 img {
+    width: auto;
+    height: 7rem;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.2);
+    /* Transparent white background */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    /* Light border */
+    border-radius: 12px;
+    padding: 10px 20px;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    /* Frosted glass effect */
+    backdrop-filter: blur(10px);
+    /* Adds blur behind the button */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+
+    /* Optional: Shadow effect for extra depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    /* Lighter background on hover */
+    border-color: rgba(255, 255, 255, 0.5);
+    /* Lighter border on hover */
+    transform: scale(1.05);
+    /* Slight scaling on hover */
+}
+
+
+#page1 h1 {
+    /* font-size: clamp(3rem, 2vw, 3rem); */
+    color: rgb(77, 77, 77);
+}
+
+
+
+#page2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: neue machina;
+    width: 100%;
+    height: 100vh;
+    background-color: #BEBFC3;
+}
+
+@media (max-width: 768px) {
+    nav {
+        /* flex-direction: column; */
+        /* align-items: flex-start; */
+        /* padding: 1rem 2rem; */
+        /* font-size: .7rem; */
+        /* height: auto; */
+    }
+
+    html {
+        font-size: clamp(12px, 2vw, 16px);
+    }
+
+}
