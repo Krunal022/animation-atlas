@@ -2,8 +2,6 @@
 
 A collection of **small, fun GSAP-powered demos**. Each project is standalone — open locally or check live demos.
 
----
-
 ## 🔗 Live Demos
 
 | Demo                    | Preview                                          |
