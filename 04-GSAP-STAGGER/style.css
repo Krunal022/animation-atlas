@@ -1,0 +1,92 @@
+@font-face {
+    font-family: aeo;
+    src: url(assets/fonts/fonnts.com-Aeonik_Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: aeo;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.main h1 {
+    color: rgba(128, 128, 128, 0.105);
+    font-size: 40vh;
+}
+
+.container {
+    position: absolute;
+    place-items: center;
+    display: grid;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    margin-right: 2rem;
+    cursor: pointer;
+    margin-top: 1.8rem;
+    border-radius: 3rem;
+    opacity: 0;
+    filter: blur(10px);
+    padding: 1rem 2rem;
+    background-color: transparent;
+    font-size: 2.7rem;
+    border: .2px solid white;
+    color: white;
+    transition: all ease .7s;
+}
+
+button:hover {
+    border: 1px solid lightsteelblue;
+    color: lightsteelblue;
+}
+
+
+.container h1 {
+    filter: blur(10px);
+    opacity: 0;
+    font-weight: 200;
+    margin: 2rem 0;
+    font-size: 4rem;
+    color: lightseagreen;
+    transition: 3s;
+}
+
+@media (max-width:600px) {
+    button {
+        border-radius: 25px;
+        padding: .5rem 1rem;
+        margin-right: .3rem;
+        margin-top: 1rem;
+        font-size: 1rem;
+        transition: all ease .5s;
+    }
+
+    .main h1 {
+        font-size: 10vh;
+    }
+
+    .container h1 {
+        margin: .5rem 0;
+        font-size: 2rem;
+    }
+}
