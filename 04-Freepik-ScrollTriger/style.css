@@ -1,0 +1,385 @@
+@font-face {
+    font-family: aeonik;
+    src: url(assets/fonnts.com-Aeonik_Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: aeonik;
+    color: #F7F7F7;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #0F0F0F;
+}
+
+nav {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    display: flex;
+}
+
+nav .links {
+    gap: 3rem;
+    display: flex;
+}
+
+nav a:hover {
+    color: #b4b4b4;
+}
+
+nav .links a {
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+nav button:hover {
+    cursor: pointer;
+    color: #b4b4b4;
+}
+
+nav .serach-bar {
+    border-radius: 40px;
+    background-color: #303030;
+    width: 25rem;
+    padding: .5rem .88rem;
+    gap: 1rem;
+    align-items: center;
+    display: flex;
+}
+
+nav .serach-bar input {
+    border-radius: 25px;
+    width: 100%;
+    padding: .5rem 1rem;
+    border: none;
+    background-color: transparent;
+}
+
+nav button {
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    color: #F7F7F7;
+    text-decoration: none;
+}
+
+.hero-text {
+    width: 100%;
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 20%;
+}
+
+.hero-text h1 {
+    font-weight: 500;
+    font-size: 4rem;
+}
+
+.hero-text p {
+    font-weight: 500;
+    color: gray;
+    font-size: 1rem;
+}
+
+.hero-text button {
+    color: black;
+    margin-top: 3rem;
+    border: none;
+    border-radius: 25px;
+    padding: .5rem .88rem;
+    cursor: pointer;
+}
+
+.hero-text button i {
+    color: black;
+}
+
+.hero-text button:active {
+    scale: .95;
+}
+
+.hero-image-div {
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: auto;
+    display: flex;
+}
+
+.left-img .st {
+    position: absolute;
+    height: 11rem;
+    top: 7%;
+    left: 9%;
+    width: auto;
+    z-index: 5;
+    border-radius: 18px;
+}
+
+.left-img .nd {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    height: 12rem;
+    border-radius: 18px;
+    width: auto;
+}
+
+.right-img img {
+    position: absolute;
+    border-radius: 18px;
+    top: 0%;
+    height: 20rem;
+    width: auto;
+}
+
+.hero-image-div .center-img video {
+    border-radius: 20px;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+}
+
+.hero-image-div .center-img {
+    margin-top: 3rem;
+    z-index: 9;
+}
+
+.page2 {
+    width: 100%;
+    height: 100%;
+}
+
+.page2 .compny {
+    gap: 3rem;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    display: flex;
+}
+
+.page2 .compny .im {
+    width: 10rem;
+}
+
+.page2 p {
+    font-weight: 900;
+    font-size: 2rem;
+    padding: 2rem 5rem;
+}
+
+.page2 p span {
+    font-size: 2rem;
+    color: gray;
+}
+
+.page2 .box {
+    align-items: center;
+    margin-left: 5rem;
+    justify-content: space-between;
+    display: flex;
+    width: 90vw;
+    background-size: cover;
+    background-position: center;
+    background-image: url(assets/background.avif);
+    border-radius: 25px;
+    height: 90vh;
+}
+
+.page2 .box .lef {
+    padding: 0 2rem;
+    font-size: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 80%;
+    display: flex;
+}
+
+.page2 .box .lef h1 {
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+
+.page2 .box .lef p {
+    margin-top: 1.5rem;
+    padding: 0;
+    font-weight: 100;
+    font-size: 1.3rem;
+}
+
+.page2 .box .lef button {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    border: .1px solid black;
+    border-radius: 25px;
+    width: fit-content;
+    margin-left: 12rem;
+    padding: .5rem .99rem;
+    color: black;
+    cursor: pointer;
+}
+
+.page2 .box .lef button:active {
+    scale: .95;
+}
+
+.page2 .box .lef button i {
+    color: black;
+}
+
+.page2 .box .rig {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.page2 .box .rig video {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width:600px) {
+    nav {
+        padding: .5rem;
+    }
+
+    nav .logo {
+        font-size: .2rem;
+    }
+
+    nav .links {
+        display: none;
+    }
+
+    nav button {
+        font-size: 1.2rem;
+    }
+
+    nav .serach-bar {
+        display: none;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding: 1rem 1rem;
+    }
+
+    .hero-text h1 {
+        font-weight: 500;
+        font-size: 7vw;
+    }
+
+    .hero-text p {
+        margin-top: 1.5rem;
+        font-size: 5vw;
+    }
+
+    .hero-text button {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .hero-image-div video {
+        width: 90%;
+    }
+
+    .hero-image-div .st {
+        width: 12rem;
+        object-fit: cover;
+        top: 18%;
+        left: 0%;
+    }
+
+    .hero-image-div .nd {
+        left: 5%;
+        top: 40%;
+        width: 8rem;
+        object-fit: cover;
+    }
+
+    .hero-image-div .right-img img {
+        height: 13rem;
+        right: 0;
+        width: 5rem;
+        object-fit: cover;
+    }
+
+    .page2 .compny {
+        gap: 1rem;
+    }
+
+    .page2 .compny .im {
+        width: 4rem;
+    }
+
+    .page2 p {
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        font-weight: 100;
+        padding: 1rem 1rem;
+        font-size: 1.2rem;
+    }
+
+    .page2 p span {
+        font-size: 1.2rem;
+    }
+
+    .page2 .box {
+        height: 60%;
+        width: 100%;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .page2 .box .lef {
+        padding: 0;
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+    }
+
+    .page2 .box .lef h1 {
+        margin-top: 1rem;
+        font-size: 2rem;
+        color: black;
+        white-space: nowrap;
+    }
+
+    .page2 .box .lef p {
+        padding: 0;
+        font-size: 1.2rem;
+    }
+
+    .page2 .box .lef button {
+        margin-top: 0;
+        margin-left: 0;
+        white-space: nowrap;
+        padding: .6rem 1rem;
+        width: fit-content;
+    }
+
+    .page2 .box .rig {
+        height: 60%;
+        width: 80%;
+    }
+}
