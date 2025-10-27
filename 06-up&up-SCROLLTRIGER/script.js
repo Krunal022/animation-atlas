@@ -1,15 +1,13 @@
-// Initialize Lenis
-const lenis = new Lenis({
-    autoRaf: true,
-});
-
-// Listen for the scroll event and log the event data
-lenis.on('scroll', (e) => {
-    console.log(e);
-});
-
 document.addEventListener("DOMContentLoaded", (event) => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+    // create the scrollSmoother before your scrollTriggers
+
+    ScrollSmoother.create({
+        smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
+        effects: true, // looks for data-speed and data-lag attributes on elements
+        smoothTouch: 0.2, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+    });
 
     let mm = gsap.matchMedia();
 
@@ -18,8 +16,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".page-1",
-                // markers: true,
-                start: "25% 50%",
+                markers: true,
+                start: "35% 50%",
                 end: "45% 50%",
                 scrub: 2
             }
@@ -33,8 +31,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".page-1",
-                // markers: true,
-                start: "40% 50%",
+                markers: true,
+                start: "60% 50%",
                 end: "60% 50%",
                 scrub: 2
             }
@@ -46,49 +44,49 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
 // Block certain keyboard shortcuts and context menu
-(function () {
-    function isEditable(el) {
-        if (!el) return false;
-        const tag = el.tagName;
-        if (!tag) return false;
-        if (tag === 'INPUT' || tag === 'TEXTAREA') return true;
-        if (el.isContentEditable) return true;
-        return false;
-    }
+// (function () {
+//     function isEditable(el) {
+//         if (!el) return false;
+//         const tag = el.tagName;
+//         if (!tag) return false;
+//         if (tag === 'INPUT' || tag === 'TEXTAREA') return true;
+//         if (el.isContentEditable) return true;
+//         return false;
+//     }
 
-    document.addEventListener('keydown', function (e) {
-        const active = document.activeElement;
-        if (isEditable(active)) return; // allow shortcuts in input fields
+//     document.addEventListener('keydown', function (e) {
+//         const active = document.activeElement;
+//         if (isEditable(active)) return; // allow shortcuts in input fields
 
-        const key = (e.key || '').toLowerCase();
-        const ctrlOrMeta = e.ctrlKey || e.metaKey;
+//         const key = (e.key || '').toLowerCase();
+//         const ctrlOrMeta = e.ctrlKey || e.metaKey;
 
-        if (e.key === 'F12' || key === 'f12') {
-            e.preventDefault();
-            e.stopPropagation();
-            return false;
-        }
+//         if (e.key === 'F12' || key === 'f12') {
+//             e.preventDefault();
+//             e.stopPropagation();
+//             return false;
+//         }
 
-        if (ctrlOrMeta) {
-            if (key === 'j' || key === 'u' || key === 's' || key === 'p' || key === 'i') {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            }
-        }
+//         if (ctrlOrMeta) {
+//             if (key === 'j' || key === 'u' || key === 's' || key === 'p' || key === 'i') {
+//                 e.preventDefault();
+//                 e.stopPropagation();
+//                 return false;
+//             }
+//         }
 
-        if ((e.ctrlKey || e.metaKey) && e.shiftKey) {
-            if (key === 'i' || key === 'j' || key === 'c') {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            }
-        }
-    }, true);
+//         if ((e.ctrlKey || e.metaKey) && e.shiftKey) {
+//             if (key === 'i' || key === 'j' || key === 'c') {
+//                 e.preventDefault();
+//                 e.stopPropagation();
+//                 return false;
+//             }
+//         }
+//     }, true);
 
-    // disable contextmenu except on editable elements
-    document.addEventListener('contextmenu', function (e) {
-        if (isEditable(e.target)) return; // allow right-click in inputs
-        e.preventDefault();
-    }, true);
-})();
+//     // disable contextmenu except on editable elements
+//     document.addEventListener('contextmenu', function (e) {
+//         if (isEditable(e.target)) return; // allow right-click in inputs
+//         e.preventDefault();
+//     }, true);
+// })();

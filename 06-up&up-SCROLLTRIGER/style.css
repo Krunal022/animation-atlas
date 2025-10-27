@@ -17,17 +17,30 @@ html::-webkit-scrollbar {
     display: none;
 }
 
-nav {
-    height: 10%;
-    padding: 1rem 2rem;
+main {
+    width: 100%;
+    /* height: 100%; */
 }
 
-nav svg {
-    height: 90%;
+main .wrap {
+    width: 100%;
+    /* height: 1000vh; */
+}
+
+.page-1 nav {
+    width: 100%;
+    /* background-color: red; */
+    height: 10%;
+    padding: 1rem 2rem;
+    margin-bottom: 8rem;
+}
+
+.page-1 nav svg {
+    color: #343434;
+    height: 5vh;
 }
 
 .page-1 {
-    margin-top: 7rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -44,7 +57,7 @@ nav svg {
     text-transform: uppercase;
 }
 
-.page-1 h1::selection {
+html::selection {
     color: white;
     background-color: #F2623A;
 }
@@ -52,12 +65,14 @@ nav svg {
 .page-1 .visible-text {
     /* background-color: red; */
     width: 100%;
+    /* line-height: 1; */
     overflow: hidden;
     height: 7.5rem;
 }
 
 .page-1 .hidden-text h1 {
-    /* transform: translateY(-360px); */
+    /* transform: translateY(0px); */
+    line-height: 7.5rem;
     text-transform: uppercase;
     font-family: serif;
 }
@@ -79,11 +94,85 @@ nav svg {
     width: 100%;
     background-color: #F5F5F5;
     height: 100vh;
+    /* position: relative; */
+}
+
+.page-2 .imgs {
+    /* margin-top: 5rem; */
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    height: 50%;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.page-2 .st-image {
+    /* background-color: red; */
+    background-position: center;
+    background-size: cover;
+    background-image: url(assets/689dc0a0ed2177ef191a18bd_Home.03.webp);
+    border-radius: .2rem;
+    height: 60vh;
+    width: 30vw;
+}
+
+.page-2 .nd-image {
+    /* background-color: rgb(81, 255, 0); */
+    background-image: url(assets/689dc05356c405271fad1770_Home.01.webp);
+    background-position: center;
+    background-size: cover;
+    border-radius: .2rem;
+    /* margin-top: 30vh; */
+    height: 40vh;
+    width: 20vw;
+}
+
+.page-2 .text {
+    width: 100%;
+    gap: 20rem;
+    padding-right: 5rem;
+    justify-content: flex-end;
+    /* margin-top: 7rem; */
+    align-items: center;
+    display: flex;
+}
+
+.page-2 .text p span {
+    color: #F2623A;
+}
+
+.page-2 .text p {
+    position: relative;
+    width: 25%;
+    /* background-color: red; */
+    font-size: 2rem;
+}
+
+.page-2  .fix-img {
+    position: sticky;
+    left: 20%;
+    top: 0;
+    background-image: url(assets/while-hover//&.webp);
+    /* background-color: rebeccapurple; */
+    border-radius: .6rem;
+    height: 34vh;
+    width: 15vw;
+}
+
+.page-3 {
+    background: #F5F5F5;
+    height: 100vh;
+    width: 100%;
 }
 
 @media (max-width:600px) {
-    nav svg {
-        height: 2rem;
+    .page-1 nav {
+        margin-bottom: 2rem;
+    }
+
+    .page-1 nav svg {
+        height: 1.2rem;
     }
 
     .page-1 h1 {
