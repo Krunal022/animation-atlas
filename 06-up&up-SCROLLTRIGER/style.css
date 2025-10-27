@@ -93,7 +93,7 @@ html::selection {
 .page-2 {
     width: 100%;
     background-color: #F5F5F5;
-    height: 100vh;
+    /* height: 100vh; */
     /* position: relative; */
 }
 
@@ -129,6 +129,7 @@ html::selection {
 }
 
 .page-2 .text {
+    /* height: auto; */
     width: 100%;
     gap: 20rem;
     padding-right: 5rem;
@@ -147,9 +148,10 @@ html::selection {
     width: 25%;
     /* background-color: red; */
     font-size: 2rem;
+    margin-bottom: 5rem;
 }
 
-.page-2  .fix-img {
+.page-2 .fix-img {
     position: sticky;
     left: 20%;
     top: 0;
@@ -160,10 +162,87 @@ html::selection {
     width: 15vw;
 }
 
-.page-3 {
-    background: #F5F5F5;
-    height: 100vh;
+.page-2 .hover {
+    padding: 1.5rem 3rem;
+    padding-right: 7rem;
+    justify-content: space-between;
+    /* gap: 50rem; */
+    align-items: center;
+    /* height: 5rem; */
     width: 100%;
+    display: flex;
+    /* border: 1px solid #343434; */
+}
+
+.page-2 .hover-texts {
+    background-color: red;
+}
+
+.page-2 .hover h2 {
+
+    color: #343434;
+    font-weight: 100;
+    letter-spacing: -1px;
+    font-size: 1.5rem;
+    opacity: .6;
+}
+
+.page-2 .h01 {
+    border-top: 1px solid black;
+}
+
+.page-2 .h01,
+.h02,
+.h03,
+.h04,
+.h05,
+.h06,
+.h07 {
+    border-bottom: 1px solid black;
+}
+
+.page-2 .hover p {
+    /* background-color: red; */
+    font-size: 1.1rem;
+    opacity: .6;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+
+}
+
+.page-3 {
+    margin-top: 5rem;
+    background: #343434;
+    height: 100vh;
+    gap: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+.page-3 .img {
+    background-position: center;
+    background-size: cover;
+    border-radius: .4rem;
+    background-image: url(assets/while-hover/Grey\ Scroll.webp);
+    background-color: red;
+    height: 40vh;
+    width: 17vw;
+}
+
+.page-3 .text p span {
+    color: #F2623A;
+}
+
+.page-3 .text p {
+    text-align: center;
+    color: white;
+    padding: 0 19rem;
+    line-height: 1;
+    font-size: 2.5rem;
 }
 
 @media (max-width:600px) {
@@ -181,10 +260,13 @@ html::selection {
     }
 
     .page-1 .visible-text {
+        /* background-color: red; */
         height: 3rem;
+        /* overflow:visible; */
     }
 
     .page-1 .hidden-text h1 {
+        line-height: 1;
         /* background-color: red    ; */
     }
 
@@ -192,4 +274,80 @@ html::selection {
         margin-top: 1rem;
         height: 70vh;
     }
+
+    .page-2 .st-image {
+        height: 35vh;
+        width: 50vw;
+    }
+
+    .page-2 .nd-image {
+        height: 18vh;
+        width: 30vw;
+    }
+
+    .page-2 .fix-img {
+        display: none;
+    }
+
+    .page-2 .text {
+        /* flex-direction: column; */
+        justify-content: flex-end;
+        /* background-color: red; */
+        padding-right: 2rem;
+
+    }
+
+    .page-2 .text p {
+        font-size: .99rem;
+
+
+        width: 50%;
+    }
+
+    .page-2 .hover {
+        padding-right: 0;
+        padding: 1rem 1.5rem;
+        justify-content: space-between;
+        align-content: center;
+        display: flex;
+        font-size: 1rem;
+    }
+
+    .page-2 .hover h2 {
+        letter-spacing: normal;
+        font-size: 1rem;
+    }
+
+    .page-2 .hover p {
+        font-size: .55rem;
+    }
+
+    .page-2 .h01 {
+        border-top: .1px solid black;
+    }
+
+    .page-2 .h01,
+    .h02,
+    .h03,
+    .h04,
+    .h05,
+    .h06,
+    .h07 {
+        border-bottom: .2px solid black;
+    }
+
+    .page-3 {
+        height: 60vh;
+    }
+
+    .page-3 .img {
+        height: 30vh;
+        width: 40vw;
+    }
+
+    .page-3 .text p {
+        padding: 0 4.5rem;
+        font-size: 1rem;
+    }
+
 }
