@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // create the scrollSmoother before your scrollTriggers
 
     ScrollSmoother.create({
-        smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
+        smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
         effects: true, // looks for data-speed and data-lag attributes on elements
-        smoothTouch: 0.2, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+        smoothTouch: 0.5, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
     });
 
     let mm = gsap.matchMedia();
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".page-1",
-                markers: true,
+                // markers: true,
                 start: "35% 50%",
                 end: "45% 50%",
                 scrub: 2
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".page-1",
-                markers: true,
+                // markers: true,
                 start: "55% 50%",
                 end: "75% 50%",
                 scrub: 2
