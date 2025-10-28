@@ -10,6 +10,8 @@ A collection of **small, fun GSAP-powered demos**. Each project is standalone �
 | 02 — Hero Section Magic | [Live](https://02-herosection-magic.vercel.app/) |
 | 03 — Loading Magic      | [Live](https://03-loading-magic.vercel.app/)     |
 | 04 — Stagger Magic      | [Live](https://04-stagger-magic.vercel.app/)     |
+| 05 — ScrollTrigger Magic      | [Live](https://05-scrolltrigger-magic.vercel.app/)     |
+| 06 — LandingPage Magic      | [Live](https://06-landingtrigger-magic.vercel.app/)     |
 
 ---
 
@@ -19,7 +21,8 @@ A collection of **small, fun GSAP-powered demos**. Each project is standalone �
 * **02-GSAP-FROM** — `.from()` & `.fromTo()` showcase with restart controls
 * **03-GSAP-TIMELINE** — Timeline build, layered reveal, video & images
 * **04-GSAP-STAGGER** — Staggered motion effects, sequencing multiple elements
-
+* **05-GSAP-SCROLLTRIGGER** — **Freepik landing clone** using ScrollTrigger & easing animations
+* **06-up&up-SCROLLTRIGER** — **TheUpAndUp landing clone** with scroll-based text reveal, SmoothScroller, and media queries via `matchMedia()`
 ---
 
 ✨ **Explore, tweak, and animate!**
