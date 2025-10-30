@@ -79,7 +79,7 @@ nav .button .emoji {
 
 section .hero-text {
     width: 100%;
-    padding: 5rem 3rem;
+    padding: 5rem 3rem 1.5rem 3rem;
 }
 
 section .hero-text h1 {
@@ -96,7 +96,7 @@ section .hero-text p {
 }
 
 section .boxes {
-    padding: 0 2rem 2rem 0;
+    padding: 3rem 2rem 3rem 2rem;
     gap: 1rem;
     display: flex;
     justify-content: center;
@@ -105,12 +105,141 @@ section .boxes {
 }
 
 section .boxes .box {
-    border-radius: 1.5rem;
+    border-radius: 2.5rem;
     background-color: #FFFEF7;
     height: 25rem;
     width: 20rem;
 }
 
+section .boxes .box1 {
+    background-color: #0D8DFF;
+    rotate: 10deg;
+}
+
+section .boxes .box2 {
+    rotate: -10deg;
+}
+
+section .boxes .box3 {
+    rotate: 17deg;
+    background-color: #33C791;
+}
+
+section .boxes .box4 {
+    rotate: 7deg;
+}
+
+section .boxes .box2 video {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+section .boxes .box4 video {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+section .con-text {
+    padding: 2rem 2rem;
+    /* background-color: red; */
+    /* margin-left: ; */
+    margin-top: 3rem;
+    width: 90%;
+}
+
+section .con-text p {
+    width: 70%;
+    padding-left: 6.99rem;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+section .con-text .three {
+    margin-top: 2rem;
+    /* flex-direction: column; */
+    width: 100%;
+    /* background-color: red; */
+    justify-content: space-between;
+    align-items: flex-end;
+    display: flex;
+}
+
+section .con-text .three .img {
+    background-size: cover;
+    background-position: center;
+    background-image: url(assets/6894757aa6dd3f84f6e463a2_Anniek\ Bril.webp);
+    /* background-color: rebeccapurple; */
+    border-radius: 1.5rem;
+    height: 21rem;
+    width: 16rem;
+}
+
+section .con-text .three .txt {
+    width: 50%;
+    /* background-color: red; */
+    justify-content: flex-start;
+    gap: 3px;
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+}
+
+section .con-text .three .txt button {
+    width: fit-content;
+}
+
+section .con-text .three .txt p {
+    line-height: normal;
+    text-align: start;
+    font-weight: 600;
+    padding-left: 0;
+    /* width: 100%; */
+    font-size: 1.5rem;
+}
+
+section .con-text .three .txt button {
+    margin-top: 1rem;
+    color: #161616;
+    font-weight: 700;
+    background-color: #FAF4EC;
+    border: 1px solid black;
+    padding: .5rem .2rem .5rem .5rem;
+    font-size: 1rem;
+
+    /* background-color: red; */
+    border-radius: .7rem;
+}
+
+section .con-text .three .txt button i {
+    background-color: #161616;
+    border-radius: .5rem;
+    padding: .5rem;
+    color: white;
+}
+
+section .three .btn {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: .7rem;
+    border: 1px solid black;
+    padding: .66rem;
+}
+
+section .three .btn i {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #FA5525;
+}
+
+.sec2 {
+    height: 100%;
+    width: 100%;
+}
 
 #main {
     width: 100%;
