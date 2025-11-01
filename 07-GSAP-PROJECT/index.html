@@ -63,8 +63,8 @@
             <p>Klaar met gokken op content <br>
                 die niets oplevert?</p>
         </div>
-        <div class="boxes">
-            <div class="box box1">
+        <div class="boxes container">
+            <div class="box box1 results-card">
                 <h1>10M+</h1>
                 <div class="b-text">
                     <h3>Organische views</h3>
@@ -72,10 +72,10 @@
                     <p>Groei door slimme content</p>
                 </div>
             </div>
-            <div class="box box2">
+            <div class="box box2 results-card">
                 <video loop muted autoplay src="assets/Loop Salontopper.mp4"></video>
             </div>
-            <div class="box box3">
+            <div class="box box3 results-card">
                 <h1>30+</h1>
                 <div class="b-text">
                     <h3>Merken geholpen</h3>
@@ -83,7 +83,7 @@
                     <p>Van start-up tot multinational</p>
                 </div>
             </div>
-            <div class="box box4">
+            <div class="box box4 results-card">
                 <video loop muted autoplay src="assets/petrolhead-loop.mp4"></video>
             </div>
         </div>
@@ -104,7 +104,7 @@
 
     </section>
     <div id="main">
-        <div class="card card1">
+        <div class="card card1 ">
             <div class="left">
                 <div class="top-text">
                     <h3>Expertise</h3>
@@ -210,6 +210,114 @@
 
     <script src="https://unpkg.com/lenis@1.3.13/dist/lenis.min.js"></script>
 
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+
+            const container = document.querySelector(' .container')
+            const containerW = container.clientWidth
+
+            const cards = document.querySelectorAll('.results-card')
+            const cardsLength = cards.length
+
+            const cardContent = document.querySelectorAll('.results-card')
+
+            let currentPortion = 0 // No portion hovered at the start
+
+            cards.forEach(card => {
+                gsap.set(card, {
+                    xPercent: (Math.random() - 0.5) * 10,
+                    yPercent: (Math.random() - 0.5) * 10,
+                    rotation: (Math.random() - 0.5) * 20,
+                })
+            })
+
+            container.addEventListener("mousemove", e => {
+                // Cursor position relative to the left edge of the container
+                const mouseX = e.clientX - container.getBoundingClientRect().left
+                // Cursor’s horizontal percentage within the container
+                const percentage = mouseX / containerW
+                // Round the value up to get a valid index
+                const activePortion = Math.ceil(percentage * cardsLength)
+
+                // If a new portion is hovered
+                if (
+                    currentPortion !== activePortion &&
+                    activePortion > 0 &&
+                    activePortion <= cardsLength
+                ) {
+                    // If a portion was already hovered, reset it
+                    // -1 to target the correct index in the card set
+                    if (currentPortion !== 0) { resetPortion(currentPortion - 1) }
+
+                    // Update the index of the new portion
+                    currentPortion = activePortion
+                    // -1 to target the correct index in the card set
+                    newPortion(currentPortion - 1)
+                }
+            })
+
+            container.addEventListener("mouseleave", () => {
+                // -1 to target the correct index in the card set
+                resetPortion(currentPortion - 1)
+                // No portion is hovered anymore
+                currentPortion = 0
+
+                // Recenter all direct child elements of the cards
+                gsap.to(cardContent, {
+                    xPercent: 0,
+                    ease: 'elastic.out(1, 0.75)',
+                    duration: 0.8
+                })
+            })
+
+            function resetPortion(index) {
+                // Last active card
+                gsap.to(cards[index], {
+                    xPercent: (Math.random() - 0.5) * 10,
+                    yPercent: (Math.random() - 0.5) * 10,
+                    rotation: (Math.random() - 0.5) * 20,
+                    scale: 1,
+                    duration: 0.8,
+                    ease: 'elastic.out(1, 0.75)',
+                })
+            }
+
+            function newPortion(i) {
+                gsap.to(cards[i], {
+                    // Reset transformation attributes
+                    xPercent: 0,
+                    yPercent: 0,
+                    rotation: 0,
+                    duration: 0.8,
+                    scale: 1.1,
+                    ease: 'elastic.out(1, 0.75)' // Elastic movement at the end (out)
+                })
+
+                // For each card's child element
+                cardContent.forEach((cardContent, index) => {
+                    // If it's not the active card
+                    if (index !== i) {
+                        gsap.to(cardContent, {
+                            // When index - i < 0, push left
+                            // When index - i > 0, push right
+                            // The further (index - i) moves from 0 in both ways, the smaller the displacement
+                            xPercent: 24 / (index - i),
+                            ease: 'elastic.out(1, 0.75)',
+                            duration: 0.8
+                        })
+                        // If it is the active card
+                    } else {
+                        // Center its child
+                        gsap.to(cardContent, {
+                            xPercent: 0,
+                            ease: 'elastic.out(1, 0.75)',
+                            duration: 0.8
+                        })
+                    }
+                })
+            }
+        })
+    </script>
     <script src="script.js"></script>
 </body>
 
