@@ -12,6 +12,8 @@ A collection of **small, fun GSAP-powered demos**. Each project is standalone �
 | 04 — Stagger Magic      | [Live](https://04-stagger-magic.vercel.app/)     |
 | 05 — ScrollTrigger Magic      | [Live](https://05-scrolltrigger-magic.vercel.app/)     |
 | 06 — LandingPage Magic      | [Live](https://06-landingtrigger-magic.vercel.app/)     |
+| 07 — CardTriggers Magic      | [Live](https://07-cardtriggers-magic.vercel.app/)     |
+| 08 — SplitText Magic      | [Live](https://08-splittext-magic.vercel.app/)     |
 
 ---
 
@@ -23,6 +25,8 @@ A collection of **small, fun GSAP-powered demos**. Each project is standalone �
 * **04-GSAP-STAGGER** — Staggered motion effects, sequencing multiple elements
 * **05-GSAP-SCROLLTRIGGER** — **Freepik landing clone** using ScrollTrigger & easing animations
 * **06-up&up-SCROLLTRIGER** — **TheUpAndUp landing clone** with scroll-based text reveal, SmoothScroller, and media queries via `matchMedia()`
+* **07-GSAP-PROJECT** — Interactive card reveal animations using ScrollTrigger
+* **08-GSAP-TEXTSPLIT** — Text-splitting and reveal animations with GSAP SplitText plugin
 ---
 
 ✨ **Explore, tweak, and animate!**
