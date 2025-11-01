@@ -79,6 +79,7 @@ main {
     overflow: hidden;
     width: 100%;
     font-size: 3rem;
+    text-wrap: nowrap;
 }
 
 .two .text-hover h1 {
