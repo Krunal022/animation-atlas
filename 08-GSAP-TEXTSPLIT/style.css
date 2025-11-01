@@ -1,0 +1,166 @@
+@font-face {
+    font-family: Moranga;
+    src: url(./assets/moranga.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Moranga;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+.one {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(assets/red.jpg);
+}
+
+.one .hero-text {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 0 5rem;
+    height: 100%;
+    width: 100%;
+}
+
+.one .hero-text h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 70%;
+    font-size: 2rem;
+}
+
+.two {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(assets/green.jpg);
+    position: relative;
+}
+
+.two .text {
+    padding: 1rem 3rem;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+}
+
+.two .text-hover {
+    padding: 1rem 3rem;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+}
+
+
+.two .text h1 {
+    color: rgba(255, 255, 255, 0.381);
+    font-weight: 900;
+    overflow: hidden;
+    width: 100%;
+    font-size: 3rem;
+}
+
+.two .text-hover h1 {
+    overflow: hidden;
+    text-wrap: nowrap;
+    width: 0%;
+    color: black;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.three {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(assets/black.jpg);
+}
+
+.three .three-text {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+}
+
+.three .three-text h1 {
+    margin-top: 5rem;
+}
+
+@media (max-width:600px) {
+    .one {
+        background-size: cover;
+        background-position: -35%;
+    }
+
+    .one .hero-text {
+        padding: 0;
+    }
+
+    .one .hero-text h1 {
+        font-size: 1.5rem;
+        color: beige;
+    }
+
+    .two .text {
+        padding: 1rem .88rem;
+        width: 100%;
+    }
+
+    .two .text-hover {
+        padding: 1rem .88rem;
+        width: 100%;
+    }
+
+    .two .text h1 {
+        font-size: .78rem;
+    }
+
+    .two .text-hover h1 {
+        font-size: .78rem;
+    }
+
+    .three {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .three .three-text {
+        padding: 0;
+        flex-wrap: nowrap;
+        padding: 0;
+    }
+
+    .three .three-text h1 {
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: 0;
+        font-size: 1rem;
+    }
+
+}
