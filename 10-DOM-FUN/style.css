@@ -1,13 +1,18 @@
 @font-face {
-    font-family: aeonik;
+    font-family: aeo;
     src: url(assets/fonnts.com-Aeonik_Regular.ttf);
+}
+
+@font-face {
+    font-family: gilroy;
+    src: url(assets/Gilroy-Light.otf);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: aeonik;
+    font-family: aeo;
     color: white;
 }
 
