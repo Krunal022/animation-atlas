@@ -19,6 +19,15 @@ main {
     width: 100%;
 }
 
+html::selection{
+    background-color: #0E100F;
+    color: #2FEE65;
+}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
 main .element {
     justify-content: center;
     align-items: center;
@@ -27,6 +36,10 @@ main .element {
     width: 100%;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 main .element h1 {
     font-weight: 700;
