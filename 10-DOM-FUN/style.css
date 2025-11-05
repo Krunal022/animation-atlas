@@ -1,0 +1,136 @@
+@font-face {
+    font-family: aeonik;
+    src: url(assets/fonnts.com-Aeonik_Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: aeonik;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: black;
+    width: 100%;
+}
+
+html {
+    overflow: hidden;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+h1 {
+    color: #ffffffd9;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.buttons {
+    gap: .5rem;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.btn {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Urbanians Regular', sans-serif;
+    letter-spacing: 0.4px;
+    margin-top: 10px;
+    display: flex;
+    gap: 2.25rem;
+    background: linear-gradient(90deg, #1f1f1f, #3a3a3a);
+    /* Replace with your gradient */
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    font-weight: 300;
+    padding: 0.58rem 2rem;
+    border-radius: 9999px;
+    position: relative;
+    z-index: 9999999;
+    transition: all 0.5s ease;
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #fff;
+    background: linear-gradient(90deg, #3a3a3a, #1f1f1f);
+}
+
+
+/* For normal & line  */
+.main {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .cir {
+    pointer-events: none;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    height: 15px;
+    width: 15px;
+    mix-blend-mode: difference;
+    z-index: 555;
+    transition: all linear .3s;
+}
+
+.main h1 {
+    padding: 1rem 1rem;
+    font-family: gilroy;
+    font-size: 3rem;
+    transition: all ease .5s;
+}
+
+.main .line-x {
+    height: 1.5px;
+    width: 100%;
+    position: absolute;
+    background-color: #3a3a3a;
+}
+
+.main .line-y {
+    position: absolute;
+    height: 100%;
+    width: 1.5px;
+    background-color: #3a3a3a;
+}
+
+@media (max-width:600px) {
+
+    #main {
+        padding: 0 1rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+}
