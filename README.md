@@ -17,7 +17,8 @@ A collection of **small, fun GSAP-powered demos**. Each project is standalone �
 | 09 — Scramble Magic      | [Live](https://09-scramble-magic.vercel.app/)     |
 | 10 — DOM Magic      | [Live](https://10-cursor-magic.vercel.app/)     |
 
----
+
+> **Continue exploring [Animationn Atlas (11–20)](https://github.com/Krunal022/animationn-atlas.git)** — the GSAP magic goes on! ✨
 
 ## 📂 Projects
 
