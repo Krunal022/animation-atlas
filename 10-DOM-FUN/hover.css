@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0d0d0d;
+    color: #ffffffd9;
+
+    /* color: ; */
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+a {
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Crosshair setup */
+#crosshair {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.line-horizontal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 1px;
+    background: white;
+    opacity: 0;
+    transform: translateY(0);
+}
+
+.line-vertical {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100vh;
+    background: white;
+    opacity: 0;
+    transform: translateX(0);
+}
+
+
+.buttons {
+    gap: .5rem;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.btn {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Urbanians Regular', sans-serif;
+    letter-spacing: 0.4px;
+    margin-top: 10px;
+    display: flex;
+    gap: 2.25rem;
+    background: linear-gradient(90deg, #1f1f1f, #3a3a3a);
+    /* Replace with your gradient */
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    font-weight: 300;
+    /* display: block; */
+    padding: 0.58rem 2rem;
+    border-radius: 9999px;
+    position: relative;
+    z-index: 9999999;
+    transition: all 0.5s ease;
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #fff;
+    background: linear-gradient(90deg, #3a3a3a, #1f1f1f);
+}
